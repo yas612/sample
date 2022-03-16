@@ -20,7 +20,7 @@ public class PencilService implements PencilServiceImpl{
 	private PencilRepository repository;
 
 	@Override
-	public Pencil addPencil(Pencil pencil) {
+	public Pencil addNewPencil(Pencil pencil) {
 		log.info("The pencil with name "+pencil.getName()+" is added");
 		return repository.save(pencil);
 	}
@@ -38,7 +38,7 @@ public class PencilService implements PencilServiceImpl{
 	}
 
 	@Override
-	public String deletePencilById(int id) {
+	public String deleteExistingPencilById(int id) {
 		repository.deleteById(id);
 		return "pencil with id "+id+" is deleted";
 	}

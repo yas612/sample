@@ -6,9 +6,9 @@ import com.q12.model.Pencil;
 
 public interface PencilServiceImpl {
 
-	Pencil addPencil(Pencil pencil);
+	Pencil addNewPencil(Pencil pencil);
 	Pencil findPencilById(int id);
 	List<Pencil> findAllPencil();
-	String deletePencilById(int id);
+	String deleteExistingPencilById(int id);
 	Pencil updatePencil(Pencil pencil);
 }
