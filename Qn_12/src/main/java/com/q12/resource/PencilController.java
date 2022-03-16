@@ -19,6 +19,8 @@ import com.q12.service.PencilService;
 @RestController
 @RequestMapping("/")
 public class PencilController {
+        
+        private static final Logger log = LoggerFactory.getLogger(PencilService.class);
 	
 	@Autowired
 	PencilService service;
@@ -52,6 +54,7 @@ public class PencilController {
     @DeleteMapping("/delete/{id}")
    public String deleteMyUserById(@PathVariable("id") int id)
     {
+        log.info("deleted");
     	return service.deletePencilById(id);
     	
     }

@@ -40,6 +40,7 @@ public class PencilService implements PencilServiceImpl{
 
 	@Override
 	public String deleteExistingPencilById(int id) {
+                log.info("the pencil with the given id is found ");
 		repository.deleteById(id);
 		return "pencil with id "+id+" is deleted";
 	}
