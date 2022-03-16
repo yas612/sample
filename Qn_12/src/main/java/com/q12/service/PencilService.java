@@ -28,12 +28,13 @@ public class PencilService implements PencilServiceImpl{
 	@Override
 	public Pencil findPencilById(int id) {
 		// TODO Auto-generated method stub
+                log.info("the pencil is found ");
 		return repository.findById(id).get();
 	}
 
 	@Override
 	public List<Pencil> findAllPencil() {
-		
+		log.info("all pencils are found");
 		return repository.findAll();
 	}
 
